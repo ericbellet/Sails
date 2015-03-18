@@ -11,7 +11,10 @@ module.exports = {
   	
   	username :'string',
   	email :'string',
-  	password :'string'
+  	password :'string',
+  	reservation:{
+  		model : 'Reserva'
+  	}
 
   }
 };

@@ -12,7 +12,7 @@ index : function(req,res){
 		
 			User.find().then(function(user){
 
-			return res.json({result:user});
+			return res.json(user);
 
 		});
 

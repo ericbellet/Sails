@@ -45,8 +45,8 @@ module.exports.routes = {
 'GET /piso/show/:id' : 'PisoController.show',
 'PATCH /piso/update/:id' : 'PisoController.update',
 
-'POST /reserva/createreserva' : 'ReservaController.createreserva',
-'GET /reserva/indexreserva' : 'ReservaController.indexreserva',
+'POST /reserva/createreserva/:id' : 'ReservaController.createreserva',
+'GET /reserva/indexreserva': 'ReservaController.indexreserva',
 'DELETE /reserva/deletereserva/:id' : 'ReservaController.deletereserva',
 'GET /reserva/show/:id' : 'ReservaController.show',
 'PATCH /reserva/update/:id' : 'ReservaController.update'

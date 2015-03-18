@@ -11,7 +11,10 @@ module.exports = {
   	
   	FECHAINI :'DATE',
   	FECHAFIN :'DATE',
-  	IDUSER : 'int'
+  	numpiso : 'int',
+  	  	owner:{
+  		model : 'User'
+  	}
 
   }
 };

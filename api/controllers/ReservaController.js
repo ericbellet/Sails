@@ -19,12 +19,26 @@ indexreserva : function(req,res){
 	},
 
 createreserva : function(req,res){
+
+	var idUser = req.param("id", null);
+
 	var parameters = {};
 	var array = req.params.all();
-	
-   Reserva.create(array).then(function(reserva){
+
+	Reserva.findOne({owner:idUser}).then(function(reserva){
+		if(reserva){
+
+
+		}else{
+			parameters["FECHAINI"] = array["FECHAINI"];
+			parameters["numpiso"] = array["numpiso"];
+			parameters["owner"] = idUser;
+			
+   			Reserva.create(parameters).then(function(reserva){
 
 			return res.redirect("/reserva/indexreserva");
+				});
+		}
 
 		});
  },
